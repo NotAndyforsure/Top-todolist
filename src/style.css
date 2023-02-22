@@ -1,0 +1,471 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "itim";
+  src: url(./fonts/Itim-Regular.ttf);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 0.1fr 0.9fr /1fr;
+  background: whitesmoke;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: hsla(0, 0%, 96%, 0.89);
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  background: whitesmoke;
+  position: relative;
+}
+
+.logo,
+.startBtnDiv,
+.menuBtnDiv {
+  flex: 1 1 auto;
+}
+
+.logo {
+  width: 60%;
+  height: 80%;
+  margin: 0;
+  color: gray;
+  text-shadow: 0.02em 0.07em 0.1em black;
+  font-size: 3vw;
+  margin-left: 0.3em;
+}
+
+.startBtnDiv,
+.menuBtnDiv {
+  width: 40%;
+  height: 70%;
+  display: flex;
+  justify-content: end;
+}
+
+.start,
+.menuBtn {
+  color: gray;
+  font-size: 2vw;
+  width: 40%;
+  height: 70%;
+  border-radius: 1em;
+  height: auto;
+  text-align: center;
+  background: whitesmoke;
+  box-shadow: 0.03em 0.03em 0.04em gray;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.greetwrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50%;
+  color: gray;
+}
+.greeting {
+  margin: 0;
+  font-size: 3vw;
+  margin-left: 0.5em;
+  font-family: "itim";
+}
+
+.menuWrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.menu {
+  background: whitesmoke;
+  flex: 1 1 auto;
+  width: 30%;
+  height: 100%;
+  border: 1px solid lightgray;
+  display: grid;
+  grid-template: 0.1fr 0.9fr/1fr;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: -0.1em -0.1em 0.2em gray;
+}
+
+.projhdr {
+  text-align: center;
+  margin: 0;
+  font-family: "itim";
+  font-size: 3vw;
+  text-shadow: 0.05em 0.05em 0.1em black;
+  color: gray;
+}
+
+.projwrap {
+  display: grid;
+  grid-template: 0.1fr 0.9fr / 1fr;
+  overflow-y: auto;
+}
+
+.controlwrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.addprj,
+.addtodo {
+  width: 45%;
+  height: auto;
+  height: 55%;
+  border-radius: 1em;
+  background: whitesmoke;
+  color: gray;
+  font-weight: bold;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.present {
+  visibility: visible;
+}
+.prjs {
+  font-family: "itm";
+  font-size: 1.5vw;
+  font-weight: bold;
+  display: grid;
+  grid-template: repeat(auto-fill, minmax(4vh, 1fr)) / 1fr;
+  gap: 1% 1%;
+  overflow-y: auto;
+}
+
+.prjitemdef {
+  color: gray;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  fill: gray;
+  border-bottom: 1px solid black;
+}
+.prjitemdef > * {
+  width: 2vw;
+}
+.prjitemdef:hover {
+  background: hsl(0, 0%, 90%);
+}
+
+.createwrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  background: transparent;
+}
+
+.addprjwrap {
+  background: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 1em;
+  width: 35%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+  box-shadow: -0.02em 0.08em 0.3em hsl(0, 0%, 30%);
+}
+
+.btnwrap,
+.inputwrap {
+  height: 50%;
+  width: 80%;
+}
+
+.inputwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prjinput {
+  width: 100%;
+  height: 40%;
+  border-radius: 1em;
+  background: whitesmoke;
+  color: gray;
+}
+.btnwrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cancelprj,
+.createprj {
+  height: 60%;
+  border-radius: 1em;
+  color: white;
+  font-weight: bold;
+}
+.cancelprj {
+  width: 50%;
+  background: red;
+  font-size: 1.5vw;
+}
+.createprj {
+  width: 30%;
+  background: green;
+  font-size: 1.5vw;
+}
+
+.svg {
+  fill: gray;
+  width: 2vw;
+  cursor: pointer;
+}
+
+.svg:hover {
+  fill: black;
+}
+
+.prjitemwrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+.prjitemwrap:hover {
+  background: hsl(0, 0%, 90%);
+}
+
+.prjitemname {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  color: gray;
+  width: 80%;
+}
+.prjitemopwrap {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  width: 20%;
+  justify-content: center;
+}
+
+.red:hover {
+  color: red;
+}
+.green:hover {
+  color: green;
+}
+.yellow:hover {
+  color: yellow;
+}
+
+.wrapTodoObj {
+  display: grid;
+  grid-template: 1fr/40% 30% 20% 10%;
+  box-shadow: 0.2em 0.15em 0.1em gray;
+  place-items: center start;
+  font-family: "itim";
+  color: gray;
+  height: 100%;
+}
+
+.todoObjTitle {
+  margin-left: 2%;
+  font-size: 2vw;
+  cursor: none;
+}
+
+.todoclass {
+  overflow-y: scroll;
+  display: grid;
+  grid-template: repeat(auto-fill, minmax(9vh, 1fr)) / 1fr;
+  gap: 1%;
+}
+
+.todoObjDetails {
+  background: whitesmoke;
+  width: 50%;
+  height: 55%;
+  border-radius: 0.5em;
+  text-align: center;
+  color: gray;
+  font-weight: bold;
+  font-size: 1vw;
+}
+.todoObjDate {
+  font-size: 2vw;
+}
+
+.addnewtodowrap {
+  width: 40%;
+  height: 50%;
+  border: 1px solid gray;
+  margin-top: 7%;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/1fr;
+  box-shadow: -0.02em 0.08em 0.3em hsl(0, 0%, 30%);
+  border-radius: 1em;
+  overflow: auto;
+}
+.wraptitleprojectinput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.wrapdatepriorityinput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.wraptextarea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.wrapaddcancelbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapaddcancelbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.todotitleinput {
+  border-radius: 1em;
+  background: whitesmoke;
+  width: 80%;
+  height: 30%;
+  color: gray;
+}
+.todoprojinput {
+  border-radius: 1em;
+  background: whitesmoke;
+  height: 30%;
+  width: 80%;
+  color: gray;
+}
+.tododateinput {
+  width: 35%;
+  background: whitesmoke;
+  border-radius: 1em;
+  color: gray;
+}
+.todocancelbutton {
+  width: 30%;
+  height: 40%;
+  background: red;
+  border-radius: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.todoaddbutton {
+  width: 30%;
+  height: 40%;
+  background: green;
+  border-radius: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.todoprioritybutton {
+  width: 20%;
+  background: whitesmoke;
+  border-radius: 1em;
+  text-align: center;
+  color: gray;
+}
+.tododescriptioninput {
+  width: 80%;
+  height: 80%;
+  border-radius: 1em;
+  background: whitesmoke;
+}
+.moretododisplay {
+  display: grid;
+  grid-template: 0.8fr 0.2fr/1fr;
+  place-items: center center;
+  place-content: center center;
+  border-radius: 1em;
+  box-shadow: -0.02em 0.08em 0.3em hsl(0, 0%, 30%);
+  margin-top: 5%;
+  border: 1px solid gray;
+  width: 45%;
+  height: 60%;
+}
+
+.moretodotxtareawrap {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.moretodotxtarea {
+  width: 70%;
+  height: 80%;
+  border-radius: 1em;
+  background: whitesmoke;
+  border: 2px solid gray;
+}
+
+.moretodobtn {
+  background: whitesmoke;
+  border-radius: 1em;
+  width: 70%;
+  height: 38%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: gray;
+}
